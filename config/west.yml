@@ -5,12 +5,12 @@ manifest:
     - name: cannonkeys
       url-base: https://github.com/cannonkeys
   projects:
-    # Official ZMK (use this; Photon board comes from the module below)
+    # CannonKeys ZMK fork – provides control_gpio_behavior.dtsi required by Photon board
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3
+      remote: cannonkeys
+      revision: main
       import: app/west.yml
-    # CannonKeys boards (Photon, etc.) – required for board: photon
+    # CannonKeys boards (Photon, etc.)
     - name: zmk-cannonkeys-keyboards
       remote: cannonkeys
       revision: main

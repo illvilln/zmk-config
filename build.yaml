@@ -18,8 +18,7 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
-# If the build fails, try removing snippet and cmake-args below to see if Studio is the cause.
+# Use CannonKeys ZMK (west.yml) so Photon finds control_gpio_behavior.dtsi.
+# Studio disabled for now; add back snippet + cmake-args if desired after a successful build.
 include:
   - board: photon
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
