@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/cannonkeys
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: cannonkeys
+      revision: main  # This points to CannonKeys' version of ZMK
       import: app/west.yml
     - name: zmk-cannonkeys-keyboards
       remote: cannonkeys
