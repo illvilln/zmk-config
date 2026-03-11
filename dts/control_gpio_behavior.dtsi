@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2024 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * Provides the gpc (GPIO control) behavior required by the Photon board.
+ * C implementation comes from the zmk-gpio-behavior module.
+ */
+
+/ {
+	behaviors {
+		/omit-if-no-ref/ gpc: gpctrl {
+			compatible = "zmk,behavior-control-gpio";
+			#binding-cells = <2>;
+			display-name = "GPIO Control";
+		};
+	};
+};

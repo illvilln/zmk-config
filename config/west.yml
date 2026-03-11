@@ -4,15 +4,19 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: cannonkeys
       url-base: https://github.com/cannonkeys
+    - name: awkannan
+      url-base: https://github.com/awkannan
   projects:
-    # CannonKeys ZMK fork – provides control_gpio_behavior.dtsi required by Photon board
     - name: zmk
-      remote: cannonkeys
-      revision: main
+      remote: zmkfirmware
+      revision: v0.3
       import: app/west.yml
-    # CannonKeys boards (Photon, etc.)
     - name: zmk-cannonkeys-keyboards
       remote: cannonkeys
+      revision: main
+    # Provides GPIO control behavior (C implementation) required by Photon
+    - name: zmk-gpio-behavior
+      remote: awkannan
       revision: main
   self:
     path: config
